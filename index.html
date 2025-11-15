@@ -15,6 +15,9 @@
   <meta content="1nparj5QmHqPyY1pHIuevLbkzAxa38EQwLyqvaprOVY" name="google-site-verification" />
   <meta content="Webflow" name="generator" />
   <link href="css/artcraft-ttm.webflow.shared.95169231a.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
   <style>
     @media (min-width:992px) {
       html.w-mod-js:not(.w-mod-ix) [data-w-id="590b5722-cab0-db7d-60c7-3e35f5fe4713"] {
@@ -105,18 +108,20 @@
     }
   </style>
   <style>
-    .nav-logo{
+    .nav-logo {
       height: 80px;
     }
+
     @media (max-width:768px) {
-          .nav-logo{
-      height: 50px;
+      .nav-logo {
+        height: 50px;
+      }
     }
-    }
+
     @media (max-width:480px) {
-          .nav-logo{
-      height: 50px;
-    }
+      .nav-logo {
+        height: 50px;
+      }
     }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -139,8 +144,7 @@
           role="banner" class="header-navbar-2 w-nav">
           <div class="container-fuild w-container">
             <div class="site-navigration-2"><a href="/" aria-current="page"
-                class="nav-brand-block w-nav-brand w--current"><img
-                  src="/images/Logo.png" loading="lazy" alt="Logo"
+                class="nav-brand-block w-nav-brand w--current"><img src="/images/Logo.png" loading="lazy" alt="Logo"
                   class="nav-logo" /></a>
               <nav role="navigation" class="nav-menu-2 w-nav-menu">
                 <div><a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a></div>
@@ -541,7 +545,7 @@
               <h2 class="section-heading">Meet our creative minds</h2>
             </div>
           </div>
-          <div class="team-2-btn-right-block"><a href="/" class="btn-rounded dark-border w-inline-block">
+          <div class="team-2-btn-right-block"><a href="/team.html" class="btn-rounded dark-border w-inline-block">
               <div>View team</div><img src="images/up-right-arrow.svg" loading="lazy" alt="Arrow Icon"
                 class="btn-round-icon" />
               <div class="btn-dot-box dark"></div>
@@ -659,64 +663,31 @@
     </section>
     <section class="awards-1-section section-padding-100">
       <div class="w-layout-blockcontainer container w-container">
-        <div class="center-text">
-          <div class="section-pretitle-box">
-            <div class="section-pretitle-dot"></div>
-            <div class="section-pretitle">Our awards</div>
-          </div>
-          <div class="section-title">
-            <h2 class="section-heading">Our awards &amp; achievements</h2>
-          </div>
-        </div>
-        <div class="awards-1-section-inner">
-          <div class="awards-1-block">
-            <div class="awards-thumbnail"><img src="images/awards-05.png" loading="lazy" alt="Image" /></div>
-            <div>
-              <div class="awards-1-text">May 2023</div>
-              <h3 class="awards-1-title">Recognized for excellence</h3>
+        <div class="awards-1-section-inner swiper myAwardsSlider">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide awards-1-block">
+              <div class="awards-thumbnail">
+                <img src="https://crewbloom.com/wp-content/uploads/2024/10/1-1.png" class="crew-bloom-image" />
+              </div>
             </div>
-          </div>
-          <div class="awards-1-block">
-            <div class="awards-thumbnail"><img src="images/8c28cf36ecab4d00d056a1dde1acb4cd_awards-02.svg"
-                loading="lazy" alt="Image" /></div>
-            <div>
-              <div class="awards-1-text">Dec 2022</div>
-              <h3 class="awards-1-title">Top UI/UX design studio</h3>
+
+            <div class="swiper-slide awards-1-block">
+              <div class="awards-thumbnail">
+                <img src="https://crewbloom.com/wp-content/uploads/2024/10/2-1.png" class="crew-bloom-image" />
+              </div>
             </div>
-          </div>
-          <div class="awards-1-block">
-            <div class="awards-thumbnail"><img src="images/awards-06.png" loading="lazy" alt="Image" /></div>
-            <div>
-              <div class="awards-1-text">Aug 2021</div>
-              <h3 class="awards-1-title">Best in design &amp; branding</h3>
+
+            <div class="swiper-slide awards-1-block">
+              <div class="awards-thumbnail">
+                <img src="images/crewBloom-removebg-preview.png" class="crew-bloom-image-google" />
+              </div>
             </div>
-          </div>
-          <div class="awards-1-block">
-            <div class="awards-thumbnail"><img src="images/507849f16d8d0ccfaf2c72ea1ccf30c5_awards-03.svg"
-                loading="lazy" alt="Image" /></div>
-            <div>
-              <div class="awards-1-text">Aug 2021</div>
-              <h3 class="awards-1-title">Excellence in web &amp; app development</h3>
-            </div>
-          </div>
-          <div class="awards-1-block">
-            <div class="awards-thumbnail"><img src="images/4eeadfdcfc9aa7915770e48e2aae9ec1_awards-01.svg"
-                loading="lazy" alt="Image" /></div>
-            <div>
-              <div class="awards-1-text">May 2020</div>
-              <h3 class="awards-1-title">Best digital creative agency of the year</h3>
-            </div>
-          </div>
-          <div class="awards-1-block">
-            <div class="awards-thumbnail"><img src="images/f276e034aeddf4d428e362092e3bf3a9_awards-04.svg"
-                loading="lazy" alt="Image" /></div>
-            <div>
-              <div class="awards-1-text">Dec 2019</div>
-              <h3 class="awards-1-title">Client choice award for outstanding service</h3>
-            </div>
+
           </div>
         </div>
       </div>
+
     </section>
     <section class="testimonial-1-section section-padding-100">
       <div class="w-layout-blockcontainer container-fuild w-container">
@@ -1004,7 +975,8 @@
                     id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" required=""
                     style="opacity:0;position:absolute;z-index:-1" /><span class="checkbox-label w-form-label"
                     for="checkbox-2">I agree to the Privacy Policy.</span>
-                </label></form>
+                </label>
+              </form>
               <div class="success-message w-form-done">
                 <div>Thank you! Your submission has been received!</div>
               </div>
@@ -1015,8 +987,8 @@
           </div>
         </div>
         <div class="second-footer">
-          <div class="footer-widget"><img style="height: 70px; filter: brightness(100);" src="/images/Logo.png" loading="lazy"
-              alt="Footer logo" class="footer-logo" />
+          <div class="footer-widget"><img style="height: 70px; filter: brightness(100);" src="/images/Logo.png"
+              loading="lazy" alt="Footer logo" class="footer-logo" />
             <p class="footer-desc">Suscipit turpis etiam pellentesque diam dignissim ultrices at id. Pulvinar nisl lorem
               pretium magna. Lacus nam at nec.</p>
             <div>
@@ -1049,8 +1021,8 @@
             <div class="footer-widget">
               <h3 class="footer-widget-title">Useful link</h3>
               <ul role="list" class="footer-list w-list-unstyled">
-                <li class="footer-list-item"><a href="/services" class="footer-nav-link">Services</a></li>
-                <li class="footer-list-item"><a href="/team" class="footer-nav-link">Team</a></li>
+                <li class="footer-list-item"><a href="/services.html" class="footer-nav-link">Services</a></li>
+                <li class="footer-list-item"><a href="/team.html" class="footer-nav-link">Team</a></li>
                 <li class="footer-list-item"><a href="/pricing-plan" class="footer-nav-link">Pricing plan</a></li>
                 <li class="footer-list-item"><a href="/faq" class="footer-nav-link">Faq</a></li>
                 <li class="footer-list-item"><a href="/contact-us-2" class="footer-nav-link">Contact us 2</a></li>
@@ -1068,9 +1040,9 @@
         <div class="bottom-footer">
           <div class="footer-copyright">
             <div class="copyright">
-              <div class="copyright-text">Copyright @ 2025 designed by <a href=""
-                  target="_blank" class="copyright-link">Atelier Creation</a> - powered by <a href=""
-                  target="_blank" class="copyright-link">Atelier</a></div>
+              <div class="copyright-text">Copyright @ 2025 designed by <a href="" target="_blank"
+                  class="copyright-link">Atelier Creation</a> - powered by <a href="" target="_blank"
+                  class="copyright-link">Atelier</a></div>
               <ul role="list" class="footer-nav w-list-unstyled">
                 <li class="footer-nav-item"><a href="" class="footer-nav-link-2">Changelog</a></li>
                 <li class="footer-nav-item"><a href="" class="footer-nav-link-2">Style guide</a>
@@ -1129,6 +1101,22 @@
         </a></div>
     </div> -->
   </div>
+  <script>
+  var swiper = new Swiper(".myAwardsSlider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3, // Desktop view → 3 items
+      }
+    }
+  });
+</script>
+
   <script src="js/jquery.js?site=67c940fe4acccb784784aa90" type="text/javascript"></script>
   <script src="js/webflow-script.js" type="text/javascript"></script>
 </body>
