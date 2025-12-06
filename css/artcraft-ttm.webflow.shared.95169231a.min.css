@@ -5969,6 +5969,7 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .our-services-thumb-images{
