@@ -5913,7 +5913,7 @@ strong {
 
 .animation-item.item-6 {
     transform-style: preserve-3d;
-    transform: rotateX(0)rotateY(180deg)rotate(0)
+    transform: rotateX(0)rotateY(180deg)rotate(0);
 }
 
 .animation-item.item-0 {
@@ -5941,18 +5941,52 @@ strong {
     transform-style: preserve-3d;
     width: 260px;
     height: 370px;
-    transform: rotateX(0)rotateY(-90deg)rotate(0)
+        border: 1px solid gainsboro;
+    background-color: white;
+    transform: rotateX(0)rotateY(-90deg)rotate(0);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.animation-image-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);  /* black transparent overlay */
+    z-index: 1;
+}
+/* TEXT */
+.animation-image-box-box-1-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;      /* SHOW ABOVE OVERLAY */
+    color: white;
+    font-size: 1.7rem;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-services-thumb-images{
+    height: 40vh !important;
+}
+.our-services-thumb-images-big{
+    height: 80vh;
 }
 
 .animation-image-box.box-1 {
     transform-style: preserve-3d;
-    transform: rotateX(0)rotateY(90deg)rotate(0)
+    transform: rotateX(0)rotateY(90deg)rotate(0);
 }
 
 .animation-item-image {
     border-radius: var(--border-radius--border-radius-10);
-    object-fit: cover;
     width: 100%;
+    object-fit: cover;
     height: 100%
 }
 
