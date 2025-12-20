@@ -1,0 +1,205 @@
+.Hp2-navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+      background: rgba(255, 255, 255, 0.15) !important; /* adjust if dark */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+.Hp2-dropdown-toggle {
+  padding: 0 20px 0 0;
+}
+.w-nav:before,
+.w-nav:after {
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+}
+.w-icon-arrow-down:before, .w-icon-dropdown-toggle:before {
+  content: "";
+}
+.Hp2-dropdown-link:hover, .Hp2-dropdown-link.w--current {
+  color: grey;
+}
+.Hp2-dropdown-link {
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  transition: color .3s ease-in-out;
+}
+.hp2-logo{
+    height: 50px;
+}
+.Hp2-container {
+    max-width: 1620px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.Hp2-dropdown-list {
+  border: 1px solid grey;
+  background-color: #121212;
+  color: white;
+  flex-direction: column;
+  width: 200px;
+  margin-top: 1px;
+  padding: 10px 20px;
+}
+.dropdown-icon{
+    margin-right: 0;
+}
+.w-icon-dropdown-toggle {
+  width: 1em;
+  height: 1em;
+  margin: auto 0 auto auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.Hp2-grid-nav {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: .5fr 1fr;
+    align-items: center;
+}
+
+#w-node-_9807520c-65b7-e828-71bd-909a6cfe1804-6cfe1801,
+#w-node-_9807520c-65b7-e828-71bd-909a6cfe1805-6cfe1801,
+#w-node-_9807520c-65b7-e828-71bd-909a6cfe1809-6cfe1801,
+#w-node-e6ff9f79-f479-fa42-6f69-a3df18a8ef3f-18a8ef3c {
+    grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+.Hp2-nav-menu {
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+.Hp2-navbar-text {
+  color: black;
+  font-weight: 500;
+}
+#w-node-_8f62a5fc-da4e-6072-bed1-2d4fde2fe7bb-18a8ef3c {
+  justify-self: end;
+}
+
+.Hp2-nav-link {
+  margin: 10px 15px;
+  padding: 0;
+  font-weight: 500;
+  transition: color .3s ease-in-out;
+}
+
+.Hp2-nav-link:hover, .Hp2-nav-link.w--current {
+  color: var(--color--gray-2);
+}
+[class^="w-icon-"], [class*=" w-icon-"] {
+  speak: none;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-family: webflow-icons !important;
+}
+.w-nav-overlay {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.Hp2-w-dropdown-link{
+    color: white;
+}
+.w-nav-overlay [data-nav-menu-open] {
+  top: 0;
+}
+
+.w-nav[data-animation="over-left"] .w-nav-overlay {
+  width: auto;
+}
+
+.w-nav[data-animation="over-left"] .w-nav-overlay, .w-nav[data-animation="over-left"] [data-nav-menu-open] {
+  z-index: 1;
+  top: 0;
+  right: auto;
+}
+
+.w-nav[data-animation="over-right"] .w-nav-overlay {
+  width: auto;
+}
+
+.w-nav[data-animation="over-right"] .w-nav-overlay, .w-nav[data-animation="over-right"] [data-nav-menu-open] {
+  z-index: 1;
+  top: 0;
+  left: auto;
+}
+@media screen and (min-width: 1280px) {
+    .Hp2-nav-menu {
+        grid-column-gap: 100px;
+        grid-row-gap: 100px;
+    }
+
+    .Hp2-grid-nav {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .Hp2-nav-menu {
+        grid-column-gap: 150px;
+        grid-row-gap: 150px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+      .Hp2-dropdown-list {
+    margin-top: 20px;
+  }
+      .Hp2-navbar-text {
+    display: none;
+  }
+    .Hp2-nav-menu {
+        border: 1px solid black;
+        background-color: black;
+    }
+
+    .Hp2-grid-nav {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .Hp2-navbar {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Hp2-grid-nav {
+        grid-template-columns: .5fr 1fr;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .Hp2-navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .Hp2-grid-nav {
+        grid-template-columns: 1.25fr 1fr;
+    }
+}

@@ -4601,7 +4601,7 @@ strong {
     grid-template-rows: auto;
     grid-template-columns: 8fr 4fr;
     grid-auto-columns: 1fr;
-    margin-top: 70px;
+    margin-top: 0px;
     display: grid
 }
 
@@ -6946,7 +6946,7 @@ strong {
     }
 
     .project-1-btn-block-1 {
-        margin-top: -200px
+        margin-top: 0px
     }
 
     .cta-3-title {
