@@ -4887,7 +4887,8 @@ strong {
 }
 
 .cta-3-section.section-padding-100 {
-    height: 230vh
+    height: 150vh;
+    margin-top: 5%;
 }
 
 .cta-3-content-block {
@@ -4916,12 +4917,14 @@ strong {
 .cta-3-btn-block {
     display: inline-block
 }
-
+.cta-new-deign{
+    padding-top: 0 !important;
+}
 .cta-3-sticky-box {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 140vh;
     display: flex;
     position: sticky;
     top: 0
@@ -6729,7 +6732,9 @@ strong {
     align-items: center;
     display: grid
 }
-
+.footer{
+    margin-top: 5%;
+}
 .footer-desc {
     color: var(--color--text-color-light-1);
     margin-top: 26px;

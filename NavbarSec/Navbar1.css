@@ -1,0 +1,330 @@
+.header-2 {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0
+}
+.site-navigration-2 {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding-top: 10px;
+}
+.nav-logo {
+    height: 60px;
+}
+.nav-menu-2 {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: center;
+    display: flex
+}
+.nav-link-2.w--current {
+    background-color: #c0ff7e;
+    color: black
+}
+.menu-block,
+.header-extra {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: center;
+    display: flex
+}
+.btn-rounded.dark-border {
+    border-color:black;
+    background-color: white
+}
+.btn-round-icon {
+    display: block
+}
+.btn-dot-box.dark {
+    background-color:white;
+}
+.btn-dot-box.dark:hover {
+        opacity: 0;
+    will-change: transform;
+    transform: translate3d(-0.01px, -0.002px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.btn-dot-box {
+    border-radius:50px;
+    background-color: white;
+    box-shadow: 0 0 15px 0 #c0ff7e;
+    filter: blur(5px);
+    mix-blend-mode: difference;
+    width: 50px;
+    height: 50px;
+    position: absolute
+}
+.btn-dot-box.dark {
+    background-color: white;
+}
+
+.btn-dot-box.dot1 {
+    width: 25px;
+    height: 25px
+}
+.w-nav-button {
+    float: right;
+    cursor: pointer;
+    -webkit-tap-highlight-color: #0000;
+    tap-highlight-color: #0000;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 18px;
+    font-size: 24px;
+    display: none;
+    position: relative
+}
+
+.w-nav-button:focus {
+    outline: 0
+}
+
+.w-nav-button.w--open {
+    color: #fff;
+    background-color: #c8c8c8
+}
+
+.w-nav[data-collapse=all] .w-nav-menu {
+    display: none
+}
+
+.w-nav[data-collapse=all] .w-nav-button,
+.w--nav-dropdown-open,
+.w--nav-dropdown-toggle-open {
+    display: block
+}
+[class^=w-icon-],
+[class*=\ w-icon-] {
+    speak: none;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    font-family: webflow-icons !important
+}
+
+.nav-link-2 {
+    border-radius: 50px;
+    color: black;
+    padding: 4px 14px 5px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+    transition: all .3s
+}
+
+.nav-link-2:hover {
+        background-color: #c0ff7e;
+        border-radius: 50px;
+}
+.btn-rounded {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    border: 1px solid #c0ff7e;
+    border-radius: 50px;
+    background-color: white;
+    font-family: Inter, sans-serif;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 25px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    display: inline-flex;
+    position: relative;
+    overflow: hidden
+}
+
+.btn-rounded.dark-btn {
+    border-color: var(--color--dark);
+    background-color: var(--color--heading-font-color);
+    color: var(--color--white)
+}
+
+.btn-rounded.dark-border {
+    border-color: var(--color--dark);
+    background-color: var(--color--white)
+}
+
+.btn-rounded.white-border {
+    border-color: var(--color--white);
+    color: var(--color--white);
+    background-color: #0000
+}
+
+.btn-rounded.submit-btn {
+    width: 100%;
+    transition: all .3s
+}
+
+.btn-rounded.submit-btn:hover {
+    border-color: var(--color--dark);
+    background-color: var(--color--dark);
+    color: var(--color--white)
+}
+
+.btn-rounded.skin-btn {
+    border-color: var(--color--dark)
+}
+
+.btn-rounded.submit-btn2 {
+    transition: all .3s
+}
+
+.btn-rounded.submit-btn2:hover {
+    border-color: var(--color--white);
+    background-color: var(--color--white)
+}
+.btn-rounded {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 30px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden; /* Crucial: hides the glow when it leaves the button */
+  background: white;
+  gap: 10px;
+}
+
+.btn-rounded span, 
+.btn-round-icon {
+  position: relative;
+  z-index: 2; /* Keeps text above the glow */
+}
+
+.btn-dot-box {
+  position: absolute;
+  width: 60px;        /* smaller size */
+  height: 60px;
+  background: radial-gradient(
+    circle,
+    #000 0%,
+    #000 50%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(6px);  /* small soft edge */
+  transition: opacity 0.2s ease;
+}
+
+.btn-rounded:hover,
+.btn-rounded:hover span,
+.btn-rounded:hover .btn-round-icon {
+  color: #fff;
+}
+.container-fuild {
+    min-width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.w-container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Show glow on hover */
+.btn-rounded:hover .btn-dot-box {
+  opacity: 1; /* Adjust intensity here */
+  border: 1px solid black;
+}
+.w-icon-nav-menu:before {
+    content: "";
+}
+[class^="w-icon-"], [class*=" w-icon-"]{
+    display: none;
+}
+.w-nav-button {
+    float: right;
+    cursor: pointer;
+    -webkit-tap-highlight-color: #0000;
+    tap-highlight-color: #0000;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 18px;
+    font-size: 24px;
+    display: none;
+    position: relative
+}
+
+.w-nav-button:focus {
+    outline: 0
+}
+
+.w-nav-button.w--open {
+    color: #fff;
+    background-color: #c8c8c8
+}
+.w-nav[data-collapse=all] .w-nav-button,
+.w--nav-dropdown-open,
+.w--nav-dropdown-toggle-open {
+    display: block
+}
+@media (min-width:1440px) {
+    .header-content-wrapper-2 {
+        padding-left: 85px;
+        padding-right: 85px
+    }
+}
+@media (max-width:991px) {
+        .header-2 {
+        top: 15px
+    }
+        .nav-menu-2 {
+        border-top: 1px solid black;
+        background-color: white;
+        text-align: left;
+        margin-top: 10px;
+        padding: 10px
+    }
+        .w-nav[data-collapse=medium] .w-nav-button {
+        display: block
+    }
+        .nav-link-2 {
+        margin-top: 3px;
+        margin-bottom: 4px;
+        display: inline-block
+    }
+
+    .nav-link-2.drop-nav-link {
+        padding-right: 38px
+    }
+}
+
+@media screen and (max-width:767px) {
+    .w-nav[data-collapse=small] .w-nav-button {
+        display: block
+    }
+}
+@media (max-width:991px) {
+    .nav-menu-2{
+        display: none !important;
+    }
+    .header-btn-block-2{
+        display: none;
+    }
+    .menu-button-2 {
+        color: black;
+        margin-right: -5px;
+        padding: 0;
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
