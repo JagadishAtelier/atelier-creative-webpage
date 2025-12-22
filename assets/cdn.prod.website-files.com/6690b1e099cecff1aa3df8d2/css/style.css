@@ -34,7 +34,9 @@
     font-weight: 700;
     line-height: .8em;
 }
-
+.Np2-hero-title.atelier{
+    font-size: 10vw !important;
+}
 .Np2-hero-item {
     position: sticky;
     top: 150px;
@@ -224,7 +226,14 @@
     height: 200px;
     transform: rotate(15deg);
 }
-
+    .Np2-project-image-one,
+    .Np2-project-image-two,
+    .Np2-project-image-three,
+    .Np2-project-image-four,
+    .Np2-project-image-five{
+        height: 30vh;
+        border-radius: 10px !important;
+    }
 @media screen and (min-width: 1280px) {
     .Np2-project-image-five-wrap {
         width: 300px;
@@ -301,7 +310,7 @@
     .Np2-project-image-five-wrap {
         width: 400px;
         height: 500px;
-        inset: 40% 381px 0% auto;
+        inset: 40% 75px 0% auto;
     }
 
     .Np2-project-image-five {
@@ -313,7 +322,7 @@
         width: 300px;
         height: 450px;
         position: absolute;
-        inset: 30% auto auto 0%;
+        inset: 30% auto auto 10%;
     }
 
     .Np2-project-image-four {
@@ -366,8 +375,11 @@
     }
 
     .Np2-hero-title {
-        margin-top: 80px;
+        margin-top: 0px;
         margin-bottom: 90px;
+    }
+    .Np2-hero-title.atelier{
+        margin-bottom:20px;
     }
 
     .Np2-hero-content {
@@ -546,7 +558,7 @@
     .Np2-project-image-four,
     .Np2-project-image-five{
         height: 30vh;
-        border-radius: 10px;
+        border-radius: 10px !important;
     }
     .w-dyn-list{
         width: 100%;

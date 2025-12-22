@@ -2509,8 +2509,15 @@ strong {
 
 .section-padding-100 {
     padding-top: 100px;
-    padding-bottom: 100px
+    padding-bottom: 0px
 }
+.bottom-grid-service{
+    height: 80vh;
+}
+.bottom-service-big-img{
+    height: fit-content;
+}
+
 
 .about-grid {
     grid-column-gap: 30px;
@@ -4283,7 +4290,8 @@ strong {
 .site-navigration-2 {
     justify-content: space-between;
     align-items: center;
-    display: flex
+    display: flex;
+    padding-top: 10px;
 }
 
 .nav-menu-2 {
@@ -5978,7 +5986,9 @@ strong {
 .our-services-thumb-images-big{
     height: 80vh;
 }
-
+.top-thumb-big{
+    height: 50vh !important;
+}
 .animation-image-box.box-1 {
     transform-style: preserve-3d;
     transform: rotateX(0)rotateY(90deg)rotate(0);
@@ -6832,7 +6842,12 @@ strong {
     .hero-section {
         display: block
     }
+.all-proj-btn-service{
+    position: relative !important;
+    bottom: 5rem !important;
+    right: 0 !important;
 
+};
     .hero-grid-1 {
         margin-top: -30px
     }
@@ -7631,7 +7646,18 @@ strong {
         grid-row-gap: 30px;
         grid-template-columns: 1fr 1fr
     }
-
+        .project-1-grid-1,
+    .project-1-grid-3,
+    .team-1-grid {
+        grid-template-columns: 1fr !important
+    }
+.right-side-bottom-serive{
+    top: 0 !important;
+    right: 0 !important;
+}
+.bottom-grid-service{
+    height: auto;
+}
     .project-1-item-title {
         font-size: 28px;
         line-height: 38px
@@ -8848,6 +8874,13 @@ strong {
         width: 36px;
         height: 36px
     }
+    .right-side-bottom-serive{
+        top: 0 !important;
+        right: 0 !important;
+    }
+    .bottom-grid-service{
+        height: auto;
+    }
 }
 
 #w-node-a7288792-b008-c6fc-3b60-5d5082d5245e-82d523fb,
@@ -8900,3 +8933,9 @@ strong {
     padding: 20px 0;
   }
 }
+
+.right-side-bottom-serive{
+    position: relative;
+    top: -40%;
+    right: 0;
+};

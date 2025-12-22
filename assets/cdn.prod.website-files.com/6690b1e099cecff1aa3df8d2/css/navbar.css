@@ -1,3 +1,23 @@
+.hp2-logo {
+  transition: opacity 0.3s ease;
+}
+
+.logo-alt {
+  display: none;
+  pointer-events: none;
+}
+
+/* When inside Services section */
+.Hp2-navbar.logo-switch .logo-default {
+ display: none;
+}
+
+.Hp2-navbar.logo-switch .logo-alt {
+  display: block;
+  filter: brightness(100);
+}
+
+
 .Hp2-navbar {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -203,3 +223,4 @@
         grid-template-columns: 1.25fr 1fr;
     }
 }
+

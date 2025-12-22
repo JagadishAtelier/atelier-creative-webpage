@@ -114,7 +114,7 @@
   </style>
   <style>
     .nav-logo {
-      height: 80px;
+      height: 60px;
     }
 /* Navbar 1 */
 #navbar1 {
@@ -199,7 +199,7 @@
           role="banner" class="header-navbar-2 w-nav">
           <div class="container-fuild w-container">
             <div class="site-navigration-2"><a href="/" aria-current="page"
-                class="nav-brand-block w-nav-brand w--current"><img src="/images/Logo.png" loading="lazy" alt="Logo"
+                class="nav-brand-block w-nav-brand w--current"><img src="images/Atelier.png" loading="lazy" alt="Logo"
                   class="nav-logo" /></a>
               <nav role="navigation" class="nav-menu-2 w-nav-menu">
                 <div><a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a></div>
@@ -582,7 +582,8 @@
         </div>
       </div>
     </section>
-    <section class="project-1-section section-padding-100">
+    <div id="trigger-section">
+    <section id="logo-start" class="project-1-section section-padding-100" style="position: relative;">
       <div class="project-1-marquee">
         <div class="project-1-marquee-wrap">
           <div class="project-1-marquee-block">
@@ -650,7 +651,7 @@ UI/UX</h3>
                 </div>
                 <div role="listitem" class="project-collection-item w-dyn-item">
                   <div class="project-1-item-block">
-                    <div class="project-thumbnail our-services-thumb-images-big"><img src="./images/Images/merchandise-business-goal-investment-plan-concept.jpg" loading="lazy" alt="Project Image"
+                    <div class="project-thumbnail our-services-thumb-images-big top-thumb-big"><img src="./images/Images/merchandise-business-goal-investment-plan-concept.jpg" loading="lazy" alt="Project Image"
                         sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px" class="project-image width-100" />
                       <div class="project-1-btn-block"><a href="/project/code-color"
                           class="btn-small-block w-inline-block"><img src="images/up-right-arrow.svg" loading="lazy"
@@ -669,11 +670,11 @@ Communications</h3>
                 </div>
               </div>
             </div>
-            <div class="w-dyn-list">
-              <div role="list" class="project-1-grid-3 w-dyn-items">
-                <div role="listitem" class="project-collection-item w-dyn-item">
+            <div class="w-dyn-list" style="position: relative;">
+              <div role="list" class="project-1-grid-3 w-dyn-items bottom-grid-service" style="position: relative;">
+                <div role="listitem" class="project-collection-item w-dyn-item bottom-service-big-img">
                   <div class="project-1-item-block">
-                    <div class="project-thumbnail our-services-thumb-images-big"><img src="./images/Images/web-design-programming-hand-cursor-icon.jpg" loading="lazy" alt="Project Image"
+                    <div class="project-thumbnail our-services-thumb-images-big bottom-service-big-img"><img src="./images/Images/web-design-programming-hand-cursor-icon.jpg" loading="lazy" alt="Project Image"
                         sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px"  class="project-image width-100" />
                       <div class="project-1-btn-block"><a href="/project/infinity-pixels"
                           class="btn-small-block w-inline-block"><img src="images/up-right-arrow.svg" loading="lazy"
@@ -689,7 +690,7 @@ Communications</h3>
                     </div>
                   </div>
                 </div>
-                <div role="listitem" class="project-collection-item w-dyn-item">
+                <div role="listitem" class="project-collection-item w-dyn-item right-side-bottom-serive">
                   <div class="project-1-item-block">
                     <div class="project-thumbnail our-services-thumb-images"><img src="./images/Images/laptop-with-internet-browser-search-bar-screen.jpg" loading="lazy" alt="Project Image"
                         class="project-image width-100" />
@@ -730,7 +731,7 @@ Digital Strategy</div>
               </div>
             </div>
           </div>
-          <div class="project-1-btn-block-1"><a href="/projects" class="btn-block w-inline-block">
+          <div class="project-1-btn-block-1 all-proj-btn-service"><a href="/projects" class="btn-block w-inline-block">
               <div>All projects</div><img src="images/up-right-arrow.svg" loading="lazy" alt="Up Right Arrow"
                 class="btn-icon" />
               <div class="btn-dot-box"></div>
@@ -738,7 +739,7 @@ Digital Strategy</div>
         </div>
       </div>
     </section>
-    <section class="team-2-section section-padding-100">
+    <section id="logo-end" class="team-2-section section-padding-100">
       <div class="w-layout-blockcontainer container w-container">
         <div class="team-2-heading-wrapper">
           <div>
@@ -866,6 +867,7 @@ Digital Strategy</div>
         </div>
       </div>
     </section>
+    </div>
     <section class="awards-1-section section-padding-100">
       <div class="w-layout-blockcontainer container w-container">
         <div class="awards-1-section-inner swiper myAwardsSlider">
@@ -1304,11 +1306,19 @@ fetch("./heroSection.html")
   .then(res => res.text())
   .then(html => document.getElementById("hero-footer-container").innerHTML = html);
 </script>
-  <script>
+<div id="new-navbar-container"></div>
+
+<script>
 fetch("./Navbar.html")
   .then(res => res.text())
-  .then(html => document.getElementById("new-navbar-container").innerHTML = html);
+  .then(html => {
+    document.getElementById("new-navbar-container").innerHTML = html;
+
+    // ✅ INIT LOGO SWITCH AFTER NAVBAR LOADS
+    initNavbarLogoSwitch();
+  });
 </script>
+
 <script>
   const navbar1 = document.getElementById("navbar1");
   const navbar2 = document.getElementById("new-navbar-container");
@@ -1323,6 +1333,39 @@ fetch("./Navbar.html")
     }
   });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".Hp2-navbar");
+  const start = document.getElementById("logo-start");
+  const end = document.getElementById("logo-end");
+
+  if (!navbar || !start || !end) return;
+
+  const navbarHeight = navbar.offsetHeight;
+
+  function updateLogo() {
+    const startTop = start.getBoundingClientRect().top;
+    const endTop = end.getBoundingClientRect().top;
+
+    /*
+      ACTIVE when:
+      - Services section top is ABOVE navbar
+      - Team section top is BELOW navbar
+    */
+    const isInsideSection =
+      startTop <= navbarHeight && endTop > navbarHeight;
+
+    navbar.classList.toggle("logo-switch", isInsideSection);
+  }
+
+  window.addEventListener("scroll", updateLogo);
+  window.addEventListener("resize", updateLogo);
+
+  updateLogo(); // initial check
+});
+</script>
+
+
 
 
   <script>
