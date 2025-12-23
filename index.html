@@ -113,6 +113,28 @@
     }
   </style>
   <style>
+    /* Nav links turn white only inside the section */
+.header-navbar-2.section-active .nav-link-2,
+.header-navbar-2.section-active .drop-nav-link,
+.header-navbar-2.section-active .nav-dropdown-icon {
+  color: #fff !important;
+}
+
+/* Dropdown links */
+.header-navbar-2.section-active .nav-dropdown-link {
+  color: #fff !important;
+}
+
+/* Hamburger menu icon (mobile) */
+.header-navbar-2.section-active .w-icon-nav-menu {
+  color: #fff;
+}
+
+/* Optional: underline / hover */
+.header-navbar-2.section-active .nav-link-2:hover {
+  opacity: 0.8;
+}
+
     .nav-logo {
       height: 60px;
     }
@@ -121,7 +143,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
   transition: opacity 0.25s ease;
 }
 /* Glass effect for BOTH navbars */
@@ -194,12 +216,12 @@
 <body class="body" style="overflow-x: hidden;">
   <div class="pages overflow-visible">
     <section class="header-2" id="navbar1">
-      <div class="header-content-wrapper-2">
+      <div class="header-content-wrapper-2" >
         <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-          role="banner" class="header-navbar-2 w-nav">
+          role="banner" class="header-navbar-2 w-nav" >
           <div class="container-fuild w-container">
             <div class="site-navigration-2"><a href="/" aria-current="page"
-                class="nav-brand-block w-nav-brand w--current"><img src="images/Atelier.png" loading="lazy" alt="Logo"
+                class="nav-brand-block w-nav-brand w--current"><img id="navbarLogo" src="images/Atelier.png" loading="lazy" alt="Logo"
                   class="nav-logo" /></a>
               <nav role="navigation" class="nav-menu-2 w-nav-menu">
                 <div><a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a></div>
@@ -271,7 +293,6 @@
         </div>
       </div>
     </section>
-            <div id="new-navbar-container"></div>
             <div id="hero-footer-container" class="hero-footer-container-con"></div>
 
 
@@ -1319,7 +1340,7 @@ fetch("./Navbar.html")
   });
 </script>
 
-<script>
+<!-- <script>
   const navbar1 = document.getElementById("navbar1");
   const navbar2 = document.getElementById("new-navbar-container");
 
@@ -1332,38 +1353,67 @@ fetch("./Navbar.html")
       navbar2.classList.remove("active");
     }
   });
+</script> -->
+<script>
+  const logo = document.getElementById("navbarLogo");
+
+  const defaultLogo = "images/Atelier.png";      // before scroll
+  const scrolledLogo = "/images/Logo.png"; // after scroll
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 120) {
+      logo.src = scrolledLogo;
+    } else {
+      logo.src = defaultLogo;
+    }
+  });
 </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const navbar = document.querySelector(".Hp2-navbar");
+  const logo = document.getElementById("navbarLogo");
   const start = document.getElementById("logo-start");
   const end = document.getElementById("logo-end");
+  const navbar = document.querySelector(".header-navbar-2"); // navbar wrapper
 
-  if (!navbar || !start || !end) return;
+  if (!logo || !start || !end || !navbar) return;
 
-  const navbarHeight = navbar.offsetHeight;
+  const defaultLogo = "images/Atelier.png";
+  const scrolledLogo = "/images/Logo.png";
+  const sectionLogo = "/images/w1.png";
 
   function updateLogo() {
+    const scrollY = window.scrollY;
+    const navbarHeight = logo.offsetHeight;
+
     const startTop = start.getBoundingClientRect().top;
     const endTop = end.getBoundingClientRect().top;
 
-    /*
-      ACTIVE when:
-      - Services section top is ABOVE navbar
-      - Team section top is BELOW navbar
-    */
-    const isInsideSection =
+    const insideSection =
       startTop <= navbarHeight && endTop > navbarHeight;
 
-    navbar.classList.toggle("logo-switch", isInsideSection);
+    /* LOGO PRIORITY */
+    if (insideSection) {
+      logo.src = sectionLogo;
+      navbar.classList.add("section-active");
+    } else {
+      navbar.classList.remove("section-active");
+
+      if (scrollY > 120) {
+        logo.src = scrolledLogo;
+      } else {
+        logo.src = defaultLogo;
+      }
+    }
   }
 
   window.addEventListener("scroll", updateLogo);
   window.addEventListener("resize", updateLogo);
-
-  updateLogo(); // initial check
+  updateLogo();
 });
 </script>
+
+
 
 
 

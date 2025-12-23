@@ -4280,7 +4280,8 @@ strong {
     position: absolute;
     top: 30px;
     left: 0;
-    right: 0
+    right: 0;
+    z-index: 99999;
 }
 
 .header-navbar-2 {
