@@ -4152,7 +4152,8 @@ strong {
     background-position: 0 0, 50%;
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
-    background-attachment: scroll, fixed
+    background-attachment: scroll, fixed;
+    margin-top: 50px;
 }
 
 .cta-2-section.section-padding-100 {
