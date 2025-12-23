@@ -258,55 +258,10 @@
                   class="nav-logo" /></a>
               <nav role="navigation" class="nav-menu-2 w-nav-menu">
                 <div><a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a></div>
-                <div><a href="/about-us" class="nav-link-2 w-nav-link">About</a></div>
+                <div><a href="./AboutPage/AboutPage.html" class="nav-link-2 w-nav-link">About</a></div>
                 <div><a href="/services.html" class="nav-link-2 w-nav-link">Services</a></div>
                 <div>
-                  <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
-                    <div class="nav-link-2 drop-nav-link w-dropdown-toggle">
-                      <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
-                      <div>Pages</div>
-                    </div>
-                    <nav class="nav-dropdown-list w-dropdown-list">
-                      <!-- <div class="dropdown-wrapper">
-                        <div>
-                          <div><a href="/" aria-current="page" class="nav-dropdown-link w-dropdown-link w--current">Home
-                              1</a></div>
-                          <div><a href="/home-2" class="nav-dropdown-link w-dropdown-link">Home 2</a></div>
-                          <div><a href="/about-us" class="nav-dropdown-link w-dropdown-link">About us 1</a></div>
-                          <div><a href="/about-us-2" class="nav-dropdown-link w-dropdown-link">About us 2</a></div>
-                          <div><a href="/services" class="nav-dropdown-link w-dropdown-link">Services</a></div>
-                          <div><a href="/projects" class="nav-dropdown-link w-dropdown-link">Project</a></div>
-                          <div><a href="/team" class="nav-dropdown-link w-dropdown-link">Team</a></div>
-                        </div>
-                        <div>
-                          <div><a href="/blog" class="nav-dropdown-link w-dropdown-link">Blog</a></div>
-                          <div><a href="/pricing-plan" class="nav-dropdown-link w-dropdown-link">Pricing plan</a></div>
-                          <div><a href="/contact-us" class="nav-dropdown-link w-dropdown-link">Contact us 1</a></div>
-                          <div><a href="/contact-us-2" class="nav-dropdown-link w-dropdown-link">Contact us 2</a></div>
-                          <div><a href="https://artcraft-ttm.webflow.io/service/branding-design"
-                              class="nav-dropdown-link w-dropdown-link">Services details </a></div>
-                          <div><a href="https://artcraft-ttm.webflow.io/project/infinity-pixels"
-                              class="nav-dropdown-link w-dropdown-link">Project details</a></div>
-                          <div><a href="https://artcraft-ttm.webflow.io/team/mike-johnson"
-                              class="nav-dropdown-link w-dropdown-link">Team details</a></div>
-                        </div>
-                        <div>
-                          <div><a
-                              href="https://artcraft-ttm.webflow.io/blog/the-changing-of-copyright-laws-in-the-digital-world"
-                              class="nav-dropdown-link w-dropdown-link">Blog details</a></div>
-                          <div><a href="/faq" class="nav-dropdown-link w-dropdown-link">FAQ</a></div>
-                          <div><a href="https://artcraft-ttm.webflow.io/404"
-                              class="nav-dropdown-link w-dropdown-link">Error page</a></div>
-                          <div><a href="/info-pages/changelog" class="nav-dropdown-link w-dropdown-link">Changelog</a>
-                          </div>
-                          <div><a href="/info-pages/style-guide" class="nav-dropdown-link w-dropdown-link">Style
-                              guide</a></div>
-                          <div><a href="/info-pages/licenses" class="nav-dropdown-link w-dropdown-link">Licenses</a>
-                          </div>
-                        </div>
-                      </div> -->
-                    </nav>
-                  </div>
+
                 </div>
                 <div><a href="" class="nav-link-2 w-nav-link">Blog</a></div>
                 <div><a href="/contact-us" class="nav-link-2 w-nav-link">Contact</a></div>
@@ -793,7 +748,9 @@ Digital Strategy</div>
         </div>
       </div>
     </section>
-    <section id="logo-end" class="team-2-section section-padding-100">
+    <div id="logo-end" class="new-wwds-container"></div>
+        </div>
+    <section id="" class="team-2-section section-padding-100" style="padding-top: 0;">
       <div class="w-layout-blockcontainer container w-container">
         <div class="team-2-heading-wrapper">
           <div>
@@ -921,7 +878,7 @@ Digital Strategy</div>
         </div>
       </div>
     </section>
-    </div>
+
     <section class="awards-1-section section-padding-100">
       <div class="w-layout-blockcontainer container w-container">
         <div class="awards-1-section-inner swiper myAwardsSlider">
@@ -1394,6 +1351,20 @@ fetch("./Navbar.html")
     initNavbarLogoSwitch();
   });
 </script>
+<script>
+fetch("./WhatweDoSec.html")
+  .then(res => res.text())
+  .then(html => {
+    const container = document.querySelector(".new-wwds-container");
+    if (!container) return;
+
+    container.innerHTML = html;
+
+    // ✅ INIT LOGO SWITCH AFTER NAVBAR LOADS
+    initNavbarLogoSwitch();
+  });
+</script>
+
 
 <!-- <script>
   const navbar1 = document.getElementById("navbar1");

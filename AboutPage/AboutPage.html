@@ -10,9 +10,9 @@
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
-    <title>Artistic - Creative Digital Agency HTML Template</title>
+    <title>Atelier Creation</title>
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+      <link href="../images/Atelier.png" rel="shortcut icon" type="image/x-icon" />
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,6 +34,7 @@
     <!-- Main Custom Css -->
     <link href="./custom.css" rel="stylesheet" media="screen">
         <link rel="stylesheet" href="../FooterSec/FooterSec.css">
+        <link rel="stylesheet" href="../NavbarSec/Navbar1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
@@ -58,6 +59,94 @@ main {
     min-height: calc(100vh - [height_of_your_footer]px);
 }
 </style>
+  <style>
+    /* Nav links turn white only inside the section */
+.header-navbar-2.section-active .nav-link-2,
+.header-navbar-2.section-active .drop-nav-link,
+.header-navbar-2.section-active .nav-dropdown-icon {
+  color: #fff !important;
+}
+
+/* Dropdown links */
+.header-navbar-2.section-active .nav-dropdown-link {
+  color: #fff !important;
+}
+
+/* Hamburger menu icon (mobile) */
+.header-navbar-2.section-active .w-icon-nav-menu {
+  color: #fff;
+}
+
+/* Optional: underline / hover */
+.header-navbar-2.section-active .nav-link-2:hover {
+  opacity: 0.8;
+}
+
+    .nav-logo {
+      height: 60px;
+    }
+/* Navbar 1 */
+#navbar1 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: opacity 0.25s ease;
+}
+/* Glass effect for BOTH navbars */
+#navbar1 .header-navbar-2,
+#new-navbar-container .header-navbar-2 {
+  background: rgba(255, 255, 255, 0.15) !important; /* adjust if dark */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Navbar 2 */
+#new-navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* Active state */
+#new-navbar-container.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Mobile: show ONLY navbar 1 */
+@media (max-width: 768px) {
+  #new-navbar-container {
+    display: none !important;
+  }
+
+  #navbar1 {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .container-fuild{
+    padding-left: 0;
+    padding-top: 10px;
+  }
+}
+
+
+    @media (max-width:768px) {
+      .nav-logo {
+        height: 50px;
+      }
+    }
+
+    @media (max-width:480px) {
+      .nav-logo {
+        height: 50px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -66,6 +155,39 @@ main {
     <!-- Preloader End -->
 
     <!-- Header Start -->
+         <section class="header-2" id="navbar1">
+      <div class="header-content-wrapper-2" >
+        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
+          role="banner" class="header-navbar-2 w-nav" >
+          <div class="container-fuild w-container">
+            <div class="site-navigration-2"><a href="/" aria-current="page"
+                class="nav-brand-block w-nav-brand w--current"><img id="navbarLogo" src="https://atelier-creative-webpage.vercel.app/images/Atelier.png" loading="lazy" alt="Logo"
+                  class="nav-logo" /></a>
+              <nav role="navigation" class="nav-menu-2 w-nav-menu">
+                <div><a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a></div>
+                <div><a href="#" class="nav-link-2 w-nav-link">About</a></div>
+                <div><a href="/services.html" class="nav-link-2 w-nav-link">Services</a></div>
+                <div>
+
+                </div>
+                <div><a href="" class="nav-link-2 w-nav-link">Blog</a></div>
+                <div><a href="/contact-us" class="nav-link-2 w-nav-link">Contact</a></div>
+              </nav>
+              <div class="header-extra">
+                <div class="header-btn-block-2"><a href="/contact-us" class="btn-rounded dark-border w-inline-block">
+                    <div>Contact us</div><img src="https://atelier-creative-webpage.vercel.app/images/up-right-arrow.svg" loading="lazy" alt="Arrow Icon"
+                      class="btn-round-icon" />
+                    <div class="btn-dot-box dark"></div>
+                  </a></div>
+                <div class="menu-button-2 w-nav-button">
+                  <div class="w-icon-nav-menu"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Header End -->
 
     <!-- Page Header Start -->
@@ -1474,6 +1596,37 @@ fetch("../FooterSec/FooterSec.html")
   }
 });
     </script>
+    <script>
+  const logo = document.getElementById("navbarLogo");
+
+  const defaultLogo = "https://atelier-creative-webpage.vercel.app/images/Atelier.png";      // before scroll
+  const scrolledLogo = "/images/Logo.png"; // after scroll
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 120) {
+      logo.src = scrolledLogo;
+    } else {
+      logo.src = defaultLogo;
+    }
+  });
+</script>
+<script>
+    const button = document.querySelector('.btn-rounded');
+const glow = document.querySelector('.btn-dot-box');
+
+button.addEventListener('mousemove', (e) => {
+  // Get the bounding rectangle of the button
+  const rect = button.getBoundingClientRect();
+  
+  // Calculate mouse position relative to the button
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  // Move the glow element
+  glow.style.left = `${x}px`;
+  glow.style.top = `${y}px`;
+});
+</script>
 </body>
 
 </html>

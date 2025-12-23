@@ -1,0 +1,177 @@
+.WWDS-section {
+  background: white;
+  padding: 100px 0;
+}
+
+.WWDS-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  margin: auto;
+}
+
+.WWDS-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.WWDS-tag {
+  color: #b8ff3d;
+  font-size: 25px;
+}
+
+.WWDS-subtitle {
+  letter-spacing: 2px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.WWDS-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.WWDS-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.WWDS-card {
+  border-radius: 26px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.WWDS-card-dark {
+  background: #141414;
+}
+
+.WWDS-card-highlight {
+  background: #b8ff3d;
+  color: #000;
+}
+
+.WWDS-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.WWDS-card p {
+  opacity: 1;
+  color: white;
+}
+
+.WWDS-stats {
+  display: flex;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.WWDS-stats strong {
+  font-size: 28px;
+}
+
+.WWDS-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.WWDS-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.WWDS-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.WWDS-avatars img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-left: -10px;
+  border: 2px solid #b8ff3d;
+}
+
+.WWDS-avatars span {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.WWDS-stars {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.WWDS-card-image {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.WWDS-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.WWDS-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to top, #000, transparent);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.WWDS-overlay h3,.WWDS-overlay p{
+    padding:0 6%;
+}
+.WWDS-footer {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.WWDS-free {
+  background: #b8ff3d;
+  color: #000;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.WWDS-footer a {
+  color: #b8ff3d;
+  text-decoration: underline;
+}
+
+
+@media (max-width:991px) {
+    .WWDS-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .WWDS-card-darkers{
+        height: 100%;
+    }
+}
+@media (max-width:480px) {
+    .WWDS-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .WWDS-card-darkers{
+        height: 40vh;
+    }
+}

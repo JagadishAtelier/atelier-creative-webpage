@@ -399,3 +399,8 @@ textarea.w-select {
     padding-left: 0;
     margin: 0;
 }
+.footer-Container{
+    max-width: 1330px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
