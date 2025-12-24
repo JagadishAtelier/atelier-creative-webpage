@@ -1,0 +1,189 @@
+body{
+    background-color: white !important;
+    color: black !important;
+}
+body,
+.elementor-kit-9 h1,
+.elementor-kit-9 h2,
+.elementor-kit-9 h3,
+.elementor-kit-9 h4,
+.elementor-kit-9 h5,
+.elementor-kit-9 h6,
+p,a,h1,h2,h3,h4,h5,h6,li {
+  font-family: "Fustat", sans-serif !important;
+}
+
+.page-header{
+    background-color: white !important;
+}
+.page-header-box h1{
+    color: black !important;
+}
+.post-single-meta ul li{
+    color: black !important;
+}
+.post-single-meta ul li i{
+    color: black !important;
+}
+/* RESET custom scrollbar styles */
+* {
+  scrollbar-width: auto !important;          /* Firefox */
+  scrollbar-color: auto !important;          /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: initial;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:gray !important;
+  border-radius: 50px !important;
+  border: initial !important;
+}
+.post-entry ul li{
+    color: black !important;
+}
+.premium-glow-card {
+    position: relative;
+    overflow: hidden !important;
+    background-color: #000 !important;
+    border-radius: 24px; /* important */
+    
+    view-timeline-name: --card-top-trigger;
+    view-timeline-axis: block;
+}
+
+
+.premium-glow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    /* Top-safe gradient (NO white at the top edge) */
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0) 8%,
+        rgba(255,255,255,0.45) 18%,
+        rgba(255,255,255,0.25) 40%,
+        rgba(255,255,255,0.1) 55%,
+        rgba(255,255,255,0) 75%
+    );
+
+    /* Edge + top masking */
+    mask-image: radial-gradient(
+        120% 90% at 50% 10%,
+        black 45%,
+        transparent 75%
+    );
+
+    -webkit-mask-image: radial-gradient(
+        120% 90% at 50% 10%,
+        black 45%,
+        transparent 75%
+    );
+
+    opacity: 0;
+    transform: translateY(-100%);
+
+    animation: revealAndWash linear forwards;
+    animation-timeline: --card-top-trigger;
+    animation-range: exit 0% exit 80%;
+}
+
+
+@keyframes revealAndWash {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-30%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(115%);
+    }
+}
+
+
+
+.premium-glow-card > * {
+    position: relative;
+    z-index: 2;
+}
+.tag-links{
+    color: black !important;
+}
+.comment-form textarea, .comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"],.comment-form .form-submit .submit{
+    background-color: #000 !important;
+}
+
+.comment-form .form-submit .submit:hover{
+    color: #BFF747 !important;
+}
+        /* Navbar 1 */
+#navbar1 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: opacity 0.25s ease;
+}
+/* Glass effect for BOTH navbars */
+#navbar1 .header-navbar-2,
+#new-navbar-container .header-navbar-2 {
+  background: rgba(255, 255, 255, 0.15) !important; /* adjust if dark */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Navbar 2 */
+#new-navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* Active state */
+#new-navbar-container.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+[class^="w-icon-"], [class*=" w-icon-"]{
+    display: none !important;
+}
+/* Mobile: show ONLY navbar 1 */
+@media (max-width: 768px) {
+  #new-navbar-container {
+    display: none !important;
+  }
+
+  #navbar1 {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .container-fuild{
+    padding-left: 0;
+    padding-top: 10px;
+  }
+}
+.footer-title{
+    color: white !important;
+}
+.page-single-post{
+    padding-bottom: 0;
+}
