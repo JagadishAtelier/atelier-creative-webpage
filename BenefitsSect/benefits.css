@@ -1,0 +1,128 @@
+.OURbenefitsSec {
+  background: white;
+  padding: 0px 3% 50px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+.OURbenefitsContainer {
+  margin: auto;
+}
+
+.OURbenefitsHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.OURbenefitsTag {
+  display: inline-block;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.OURbenefitsHeader h2 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* Grid Layout */
+.OURbenefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Cards Styling */
+.OURbenefitsCard {
+  padding: 45px 35px;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column; /* This allows us to align children vertically */
+}
+
+.OURbenefitsCard:last-child {
+  border-right: none;
+}
+
+.OURbenefitsIcon {
+  font-size: 40px;
+  margin-bottom: 25px;
+  height: 50px;
+}
+
+.OURbenefitsCard h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0; /* Remove margin to keep line positioning strict */
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e0e0e0; /* The straight horizontal line */
+  min-height: 60px; /* Ensures titles with 1 or 2 lines don't break the alignment */
+  display: flex;
+  align-items: center;
+}
+
+.OURbenefitsCard p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+/* Push Tags to the Bottom */
+.OURbenefitsTags {
+  margin-top: auto; /* This forces the tags to the bottom of the card */
+  display: flex;
+  gap: 10px;
+}
+
+.OURbenefitsTags span {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  text-transform: capitalize;
+}
+
+/* Footer CTA */
+.OURbenefitsFooter {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.OURbenefitsFooter a {
+  color: #b6ff3b;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .OURbenefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .OURbenefitsCard {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .OURbenefitsCard:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .OURbenefitsGrid {
+    grid-template-columns: 1fr;
+  }
+  .OURbenefitsCard {
+    border-right: none;
+  }
+}

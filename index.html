@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     @media (min-width:992px) {
       html.w-mod-js:not(.w-mod-ix) [data-w-id="590b5722-cab0-db7d-60c7-3e35f5fe4713"] {
@@ -243,7 +244,8 @@
   <link href="images/Atelier.png" rel="shortcut icon" type="image/x-icon" />
   <link href="images/app-icon.png" rel="apple-touch-icon" />
   <meta name="google-site-verification" content="1nparj5QmHqPyY1pHIuevLbkzAxa38EQwLyqvaprOVY" />
-
+  <link rel="stylesheet" href="./BenefitsSect/benefits.css"/>
+  <link rel="stylesheet" href="./HowItWork/HowItWork.css"/>
 </head>
 
 <body class="body" style="overflow-x: hidden;">
@@ -263,11 +265,11 @@
                 <div>
 
                 </div>
-                <div><a href="" class="nav-link-2 w-nav-link">Blog</a></div>
-                <div><a href="/contact-us" class="nav-link-2 w-nav-link">Contact</a></div>
+                <div><a href="/BlogPage/blog.html" class="nav-link-2 w-nav-link">Blog</a></div>
+                <div><a href="/ContactPage/ContactPage.html" class="nav-link-2 w-nav-link">Contact</a></div>
               </nav>
               <div class="header-extra">
-                <div class="header-btn-block-2"><a href="/contact-us" class="btn-rounded dark-border w-inline-block">
+                <div class="header-btn-block-2"><a href="/ContactPage/ContactPage.html" class="btn-rounded dark-border w-inline-block">
                     <div>Contact us</div><img src="images/up-right-arrow.svg" loading="lazy" alt="Arrow Icon"
                       class="btn-round-icon" />
                     <div class="btn-dot-box dark"></div>
@@ -749,7 +751,9 @@ Digital Strategy</div>
       </div>
     </section>
     <div id="logo-end" class="new-wwds-container"></div>
+
         </div>
+            <div id="new-bene-container"></div>
     <section id="" class="team-2-section section-padding-100" style="padding-top: 0;">
       <div class="w-layout-blockcontainer container w-container">
         <div class="team-2-heading-wrapper">
@@ -1056,6 +1060,7 @@ Digital Strategy</div>
           class="cta-img cta-img-8" />
       </div>
     </section>
+    <div id="new-work-container"></div>
 <section class="blog-1-section section-padding-100">
   <div class="w-layout-blockcontainer container w-container" style="max-width: none;">
     <div class="blog-1-heading-wrapper">
@@ -1339,6 +1344,11 @@ fetch("./heroSection.html")
   .then(res => res.text())
   .then(html => document.getElementById("hero-footer-container").innerHTML = html);
 </script>
+  <script>
+fetch("./HowItWork/HowItWork.html")
+  .then(res => res.text())
+  .then(html => document.getElementById("new-work-container").innerHTML = html);
+</script>
 <div id="new-navbar-container"></div>
 
 <script>
@@ -1359,6 +1369,16 @@ fetch("./WhatweDoSec.html")
     if (!container) return;
 
     container.innerHTML = html;
+
+    // ✅ INIT LOGO SWITCH AFTER NAVBAR LOADS
+    initNavbarLogoSwitch();
+  });
+</script>
+<script>
+fetch("./BenefitsSect/benefitsSec.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("new-bene-container").innerHTML = html;
 
     // ✅ INIT LOGO SWITCH AFTER NAVBAR LOADS
     initNavbarLogoSwitch();

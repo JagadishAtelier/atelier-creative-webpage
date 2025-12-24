@@ -123,8 +123,13 @@ p,a,h1,h2,h3,h4,h5,h6,li {
 .tag-links{
     color: black !important;
 }
-.comment-form textarea, .comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"],.comment-form .form-submit .submit{
-    background-color: #000 !important;
+.comment-form textarea, .comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"]{
+    background-color: white !important;
+    border: 1px solid rgb(221, 219, 219);
+}
+.comment-form .form-submit .submit{
+  background-color: #000 !important;
+  
 }
 
 .comment-form .form-submit .submit:hover{
@@ -186,4 +191,15 @@ p,a,h1,h2,h3,h4,h5,h6,li {
 }
 .page-single-post{
     padding-bottom: 0;
+}
+.elementor-5549 .elementor-element.elementor-element-288c22e .elementor-repeater-item-ae88438 > a,
+.elementor-5549 .elementor-element.elementor-element-288c22e .ekit_social_media > li > a{
+    background-color: black;
+}
+.elementor-kit-9 button, .elementor-kit-9 input[type="button"], .elementor-kit-9 input[type="submit"], .elementor-kit-9 .elementor-button{
+    background-color: #BFF747 !important;
+}
+.nav-link-2.w--current {
+    background-color: #c0ff7e;
+    color: black
 }
