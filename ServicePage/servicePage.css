@@ -83,3 +83,8 @@ body
     position: relative;
     z-index: 2;
 }
+.elementor-10103 .elementor-element.elementor-element-2e92f3e .elementskit-accordion .elementskit-card .elementskit-card-header .elementskit-btn-link .ekit_accordion_active_icon{
+font-size: 24px;
+    color: black;
+    fill: var(--e-global-color-white);
+}
