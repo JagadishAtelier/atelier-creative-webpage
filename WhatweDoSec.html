@@ -12,6 +12,7 @@
     <link rel="alternate" type="application/rss+xml" title="Creza &raquo; Comments Feed"
         href="https://demo.awaikenthemes.com/creza/comments/feed/" />
     <link rel="stylesheet" href="./css/wwds/wwds.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -21,8 +22,8 @@
   <div class="WWDS-container">
 
     <!-- Header -->
-    <div class="WWDS-header">
-        <div style="display: flex; gap: 10px; align-items: end; justify-content: center; text-align: center;">
+    <div class="WWDS-header" data-aos="fade-down" data-aos-delay="100">
+        <div class="wwds-tags-sub">
       <span class="WWDS-tag">*</span>
       <h4 class="WWDS-subtitle">WHAT WE DO</h4>
       </div>
@@ -36,46 +37,49 @@
     <div class="WWDS-grid">
 
       <!-- Card 1 -->
-      <div class="WWDS-card WWDS-card-dark">
+      <div class="WWDS-card WWDS-card-dark" data-aos="fade-right" data-aos-delay="100">
         <h3>CONTENT CREATION & MULTIMEDIA</h3>
         <p>From compelling copywriting to engaging video production.</p>
 
         <div class="WWDS-stats">
-          <div style="color: white;">
-            <strong>250+</strong>
+          <div >
+<strong class="WWDS-counter" data-count="20">0</strong><span>+</span>
+
             <span>Happy Clients</span>
           </div>
-          <div style="color: white;">
-            <strong>100+</strong>
+          <div >
+<strong class="WWDS-counter" data-count="50">0</strong><span>+</span>
+
             <span>Creative Expert</span>
           </div>
         </div>
 
         <div class="WWDS-author">
           <img src="https://demo.awaikenthemes.com/creza/wp-content/uploads/2025/10/author-1.jpg" />
-          <div style="color: white;">
-            <h5 style="color: white;">CODY FISHER</h5>
+          <div>
+            <h5 >CODY FISHER</h5>
             <span>Web Designer</span>
           </div>
         </div>
       </div>
 
       <!-- Card 2 (Highlight) -->
-      <div class="WWDS-card WWDS-card-highlight">
+      <div class="WWDS-card WWDS-card-highlight" data-aos="fade-down" data-aos-delay="100">
         <div class="WWDS-rating">
           <div class="WWDS-avatars">
             <img src="https://demo.awaikenthemes.com/creza/wp-content/uploads/2025/10/author-1.jpg">
             <img src="https://demo.awaikenthemes.com/creza/wp-content/uploads/2025/10/author-2.jpg">
             <img src="https://demo.awaikenthemes.com/creza/wp-content/uploads/2025/10/author-3.jpg">
             <img src="https://demo.awaikenthemes.com/creza/wp-content/uploads/2025/10/author-4.jpg">
-            <span>20+</span>
+<strong class="WWDS-counter" data-count="25">0</strong><span>+</span>
+
           </div>
           <div class="WWDS-stars">★★★★★</div>
-          <p style="color: black;">Clients Who Believe in Us</p>
+          <p >Clients Who Believe in Us</p>
         </div>
 
-        <h3 style="color: black;">BRAND STRATEGY</h3>
-        <p style="color: black;">We help craft unique brand identity that reflects your values.</p>
+        <h3 >BRAND STRATEGY</h3>
+        <p >We help craft unique brand identity that reflects your values.</p>
 
         <img
           class="WWDS-card-image"
@@ -84,7 +88,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="WWDS-card WWDS-card-dark WWDS-card-darkers">
+      <div class="WWDS-card WWDS-card-dark WWDS-card-darkers" data-aos="fade-down" data-aos-delay="100">
         <img
           class="WWDS-bg-image"
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
@@ -106,8 +110,9 @@
         </p>
 
         <div class="WWDS-stats">
-          <div style="color: white;">
-            <strong>50+</strong>
+          <div>
+<strong class="WWDS-counter" data-count="15">0</strong><span>+</span>
+
             <span>Projects Delivery</span>
           </div>
         </div>
@@ -115,8 +120,8 @@
         <div class="WWDS-author">
           <img src="https://demo.awaikenthemes.com/creza/wp-content/uploads/2025/10/author-2.jpg" />
           <div>
-            <h5 style="color: white;">KATHRYN MURPHY</h5>
-            <span style="color: white;">Marketing Coordinator</span>
+            <h5>KATHRYN MURPHY</h5>
+            <span>Marketing Coordinator</span>
           </div>
         </div>
       </div>
@@ -124,6 +129,58 @@
     </div>
   </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".WWDS-counter");
+
+  const speed = 200; // smaller = faster
+
+  const startCount = (counter) => {
+    const target = +counter.getAttribute("data-count");
+    let count = 0;
+
+    const update = () => {
+      const increment = Math.ceil(target / speed);
+      count += increment;
+
+      if (count < target) {
+        counter.innerText = count;
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCount(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach(counter => observer.observe(counter));
+});
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  if (window.innerWidth > 768) {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      offset: 120
+    });
+  }
+</script>
+
 
 </body>
 

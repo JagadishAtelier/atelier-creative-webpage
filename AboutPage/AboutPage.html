@@ -62,6 +62,27 @@ footer, .copyright-section {
 main {
     min-height: calc(100vh - [height_of_your_footer]px);
 }
+@media (max-width: 991px) {
+  /* Hide menu by default on mobile */
+  .nav-menu-2 {
+    display: none;
+    flex-direction: column;
+    background:white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+  }
+
+  /* When the 'active' class is added via JS, show the menu */
+  .nav-menu-2.active {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
 </style>
   <style>
     /* Nav links turn white only inside the section */
@@ -184,7 +205,8 @@ main {
                     <div class="btn-dot-box dark"></div>
                   </a></div>
                 <div class="menu-button-2 w-nav-button">
-                  <div class="w-icon-nav-menu"></div>
+                  <div class="mobile-bars-list"><i class="fas fa-bars" aria-hidden="true"></i>
+</div>
                 </div>
               </div>
             </div>
@@ -1630,6 +1652,30 @@ button.addEventListener('mousemove', (e) => {
   glow.style.left = `${x}px`;
   glow.style.top = `${y}px`;
 });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.querySelector('.mobile-bars-list');
+    const navMenu = document.querySelector('.nav-menu-2');
+
+    if (menuButton && navMenu) {
+      menuButton.addEventListener('click', function() {
+        // Toggles the 'active' class defined in CSS
+        navMenu.classList.toggle('active');
+        
+        // Optional: Change icon to an 'X' when open
+        const icon = menuButton.querySelector('i');
+        if (navMenu.classList.contains('active')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    }
+  });
 </script>
 </body>
 

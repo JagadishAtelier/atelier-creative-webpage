@@ -4,8 +4,8 @@
 }
 
 .WWDS-container {
-    padding-left: 2%;
-    padding-right: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
   margin: auto;
 }
 
@@ -26,8 +26,6 @@
 }
 
 .WWDS-title {
-  font-size: 56px;
-  font-weight: 800;
   line-height: 1.1;
 }
 
@@ -48,12 +46,38 @@
 }
 
 .WWDS-card-dark {
-  background: #141414;
+  background: black;
+  color: white !important;
+}
+
+.WWDS-author h5 {
+  color: white;
+}
+
+.WWDS-card-dark {
+  transition: transform 0.3s ease;
+}
+
+.WWDS-card-dark:hover {
+  transform: translateY(-8px);
+  color: #b8ff3d !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.WWDS-card-highlight:hover {
+  transform: translateY(-8px);
+  color: #b8ff3d !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.WWDS-card-dark:hover .WWDS-author h5 {
+  color: #b8ff3d;
 }
 
 .WWDS-card-highlight {
-  background: #b8ff3d;
-  color: #000;
+  background: black;
+  color: white;
+  transition: transform 0.3s ease;
 }
 
 .WWDS-card h3 {
@@ -64,7 +88,6 @@
 
 .WWDS-card p {
   opacity: 1;
-  color: white;
 }
 
 .WWDS-stats {
@@ -137,9 +160,12 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-.WWDS-overlay h3,.WWDS-overlay p{
-    padding:0 6%;
+
+.WWDS-overlay h3,
+.WWDS-overlay p {
+  padding: 0 6%;
 }
+
 .WWDS-footer {
   text-align: center;
   margin-top: 80px;
@@ -158,20 +184,45 @@
   text-decoration: underline;
 }
 
+.wwds-tags-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 
 @media (max-width:991px) {
-    .WWDS-grid{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .WWDS-card-darkers{
-        height: 100%;
-    }
+  .WWDS-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .WWDS-card-darkers {
+    height: 100%;
+  }
 }
+
 @media (max-width:480px) {
-    .WWDS-grid{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .WWDS-card-darkers{
-        height: 40vh;
-    }
+  .WWDS-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .WWDS-card-darkers {
+    height: 40vh;
+  }
+
+  .WWDS-section {
+    padding: 80px 0;
+  }
+
+  .WWDS-header {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .wwds-tags-sub {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+  }
 }
