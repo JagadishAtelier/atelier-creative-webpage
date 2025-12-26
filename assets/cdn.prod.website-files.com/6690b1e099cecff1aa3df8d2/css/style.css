@@ -390,64 +390,71 @@
 @media screen and (max-width: 991px) {
 
     .Np2-project-image-five-wrap {
-        width: 100%;
-        height: 100%;
-        position: static;
+        width: 400px;
+        height: 500px;
+        inset: 800px -16px auto auto;
+        /* position: static; */
     }
 
     .Np2-project-image-five {
-        width: 100%;
+        /* width: 100%;
         height: 100%;
-        transform: rotate(0);
+        transform: rotate(0); */
     }
 
     .Np2-project-image-four-wrap {
-        width: 100%;
-        height: 100%;
-        position: static;
+          width: 300px;
+        height: 450px;
+        /* position: static; */
+        inset:600px auto auto 210px;
     }
 
     .Np2-project-image-four {
-        width: 100%;
+        /* width: 100%;
         height: 100%;
-        transform: rotate(0);
+        transform: rotate(0); */
     }
 
     .Np2-project-image-three-wrap {
         filter: blur();
-        width: 100%;
-        height: 100%;
-        position: static;
+        inset: 490px 130px auto auto;
+        width: 250px;
+        height: 300px;
+        /* position: static; */
     }
 
     .Np2-project-image-three {
-        width: 100%;
+        height: 150px;
+        /* width: 100%;
         height: 100%;
-        transform: rotate(0);
+        transform: rotate(0); */
     }
 
     .Np2-project-image-two-wrap {
-        width: 100%;
-        height: 100%;
-        position: static;
+       width: 250px;
+        height: 300px;
+       /* position: static; */
     }
 
     .Np2-project-image-two {
-        width: 100%;
+        /* width: 100%;
         height: 100%;
-        transform: rotate(0);
+        transform: rotate(0); */
     }
 
     .Np2-project-image-one {
-        width: 100%;
+        /* width: 100%;
         height: 100%;
-        transform: rotate(0);
+        transform: rotate(0); */
     }
 
     .Np2-project-image-one-wrap {
-        width: 100%;
+        inset: 200px auto auto 210px;
+        width: 250px;
+        height: 300px;
+        /* width: 100%;
         height: 100%;
-        position: static;
+        position: static; */
     }
 
     .Np2-grid-hero-content {
@@ -457,9 +464,13 @@
     }
 
     .Np2-hero-section {
-        height: auto;
+        height: 180vh;
+        inset:100px auto 100px auto;
         padding-top: 30px;
         padding-bottom: 80px;
+    }
+    .Np2-hero-item{
+        top: 200px;
     }
 
     .Np2-hero-title {
@@ -468,10 +479,10 @@
     }
 
     .Np2-hero-item {
-        height: auto;
+        /* height: auto;
         margin-bottom: 30px;
         position: static;
-        top: 0;
+        top: 0; */
     }
 
     .Np2-hero-content-wrap {
@@ -557,7 +568,7 @@
     .Np2-project-image-three,
     .Np2-project-image-four,
     .Np2-project-image-five{
-        height: 30vh;
+        height: 20vh;
         border-radius: 10px !important;
     }
     .w-dyn-list{
