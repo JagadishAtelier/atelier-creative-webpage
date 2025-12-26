@@ -501,66 +501,70 @@
                 background-image: none !important;
             }
         }
+
         /* Navbar 1 */
-#navbar1 {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  transition: opacity 0.25s ease;
-}
-/* Glass effect for BOTH navbars */
-#navbar1 .header-navbar-2,
-#new-navbar-container .header-navbar-2 {
-  background: rgba(255, 255, 255, 0.15) !important; /* adjust if dark */
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
-}
+        #navbar1 {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            transition: opacity 0.25s ease;
+        }
 
-/* Navbar 2 */
-#new-navbar-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-}
+        /* Glass effect for BOTH navbars */
+        #navbar1 .header-navbar-2,
+        #new-navbar-container .header-navbar-2 {
+            background: rgba(255, 255, 255, 0.15) !important;
+            /* adjust if dark */
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+        }
 
-/* Active state */
-#new-navbar-container.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-[class^="w-icon-"], [class*=" w-icon-"]{
-    display: none !important;
-}
-/* Mobile: show ONLY navbar 1 */
-@media (max-width: 768px) {
-  #new-navbar-container {
-    display: none !important;
-  }
+        /* Navbar 2 */
+        #new-navbar-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
 
-  #navbar1 {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  .container-fuild{
-    padding-left: 0;
-    padding-top: 10px;
-  }
-}
+        /* Active state */
+        #new-navbar-container.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        [class^="w-icon-"],
+        [class*=" w-icon-"] {
+            display: none !important;
+        }
+
+        /* Mobile: show ONLY navbar 1 */
+        @media (max-width: 768px) {
+            #new-navbar-container {
+                display: none !important;
+            }
+
+            #navbar1 {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .container-fuild {
+                padding-left: 0;
+                padding-top: 10px;
+            }
+        }
     </style>
     <meta name="theme-color" content="#000000">
-  <link href="../images/Atelier.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="../images/Atelier.png" rel="shortcut icon" type="image/x-icon" />
     <meta name="msapplication-TileImage"
         content="https://demo.awaikenthemes.com/artistics/wp-content/uploads/2024/11/favicon.png" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
     <link rel="stylesheet" href="./servicePage.css">
     <link rel="stylesheet" href="../NavbarSec/Navbar1.css">
@@ -571,41 +575,46 @@
 <body
     class="wp-singular page-template page-template-elementor_header_footer page page-id-10103 page-child parent-pageid-78 wp-custom-logo wp-theme-artistics tt-magic-cursor demo-1 elementor-default elementor-template-full-width elementor-kit-8 elementor-page elementor-page-10103">
     <section class="header-2" id="navbar1">
-      <div class="header-content-wrapper-2">
-        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-          role="banner" class="header-navbar-2 w-nav">
-          <div class="container-fuild w-container">
-            <div class="site-navigration-2"><a href="/" aria-current="page"
-                class="nav-brand-block w-nav-brand w--current"><img src="https://atelier-creative-webpage.vercel.app/images/Atelier.png" loading="lazy" alt="Logo"
-                  class="nav-logo" /></a>
-              <nav role="navigation" class="nav-menu-2 w-nav-menu">
-                <div><a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a></div>
-                <div><a href="../AboutPage/AboutPage.html" class="nav-link-2 w-nav-link">About</a></div>
-                <div><a href="/services.html" class="nav-link-2 w-nav-link">Services</a></div>
-                <div>
+        <div class="header-content-wrapper-2">
+            <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
+                data-easing2="ease" role="banner" class="header-navbar-2 w-nav">
+                <div class="container-fuild w-container">
+                    <div class="site-navigration-2"><a href="/" aria-current="page"
+                            class="nav-brand-block w-nav-brand w--current"><img
+                                src="https://atelier-creative-webpage.vercel.app/images/Atelier.png" loading="lazy"
+                                alt="Logo" class="nav-logo" /></a>
+                        <nav role="navigation" class="nav-menu-2 w-nav-menu">
+                            <div><a href="/" aria-current="page" class="nav-link-2 w-nav-link w--current">Home</a></div>
+                            <div><a href="../AboutPage/AboutPage.html" class="nav-link-2 w-nav-link">About</a></div>
+                            <div><a href="/services.html" class="nav-link-2 w-nav-link">Services</a></div>
+                            <div>
+
+                            </div>
+                            <div><a href="/BlogPage/blog.html" class="nav-link-2 w-nav-link">Blog</a></div>
+                            <div><a href="/ContactPage/ContactPage.html" class="nav-link-2 w-nav-link">Contact</a></div>
+                        </nav>
+                        <div class="header-extra">
+                            <div class="header-btn-block-2"><a href="/ContactPage/ContactPage.html"
+                                    class="btn-rounded dark-border w-inline-block">
+                                    <div>Contact us</div><img
+                                        src="https://atelier-creative-webpage.vercel.app/images/up-right-arrow.svg"
+                                        loading="lazy" alt="Arrow Icon" class="btn-round-icon" />
+                                    <div class="btn-dot-box dark"></div>
+                                </a></div>
+                            <div class="menu-button-2 w-nav-button">
+                                <div class="w-icon-nav-menu"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div><a href="/BlogPage/blog.html" class="nav-link-2 w-nav-link">Blog</a></div>
-                <div><a href="/ContactPage/ContactPage.html" class="nav-link-2 w-nav-link">Contact</a></div>
-              </nav>
-              <div class="header-extra">
-                <div class="header-btn-block-2"><a href="/ContactPage/ContactPage.html" class="btn-rounded dark-border w-inline-block">
-                    <div>Contact us</div><img src="https://atelier-creative-webpage.vercel.app/images/up-right-arrow.svg" loading="lazy" alt="Arrow Icon"
-                      class="btn-round-icon" />
-                    <div class="btn-dot-box dark"></div>
-                  </a></div>
-                <div class="menu-button-2 w-nav-button">
-                  <div class="w-icon-nav-menu"></div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-                <div id="new-navbar-container"></div>
+    <div id="new-navbar-container"></div>
     <div data-elementor-type="wp-page" data-elementor-id="10103" class="elementor elementor-10103">
         <div class="elementor-element elementor-element-9918e5e e-flex e-con-boxed e-con e-parent" data-id="9918e5e"
-            data-element_type="container" style="background: none;" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            data-element_type="container" style="background: none;"
+            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div class="e-con-inner">
                 <div class="elementor-element elementor-element-2b16294 e-con-full e-flex e-con e-child"
                     data-id="2b16294" data-element_type="container">
@@ -614,7 +623,7 @@
                         data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                         data-widget_type="heading.default">
                         <div class="elementor-widget-container">
-                            <h1 class="elementor-heading-title elementor-size-default hero-header"><span>SEO</span></h1>
+                            <h1 class="elementor-heading-title elementor-size-default hero-header"><span>Business Software</span></h1>
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-56f68b8 elementor-invisible elementor-widget elementor-widget-elementskit-breadcrumb"
@@ -624,15 +633,14 @@
                         <div class="elementor-widget-container">
                             <div class="ekit-wid-con">
                                 <ol class="ekit-breadcrumb">
-                                    <li class="ekit_breadcrumbs_start"><a
-                                            href="/">Home</a></li>
+                                    <li class="ekit_breadcrumbs_start"><a href="/">Home</a></li>
                                     <li class="brd_sep"><span class="separate_icon"><i
                                                 class="fas fa-star-of-life"></i></span></li>
                                     <li class="ekit_breadcrumbs_start"><a href="../services.html"
                                             title="Services">Services</a></li>
                                     <li class="brd_sep"><span class="separate_icon"><i
                                                 class="fas fa-star-of-life"></i></span></li>
-                                    <li>SEO</li>
+                                    <li>Business Software</li>
                                 </ol>
                             </div>
                         </div>
@@ -757,7 +765,7 @@
                             data-widget_type="image.default">
                             <div class="elementor-widget-container">
                                 <img fetchpriority="high" decoding="async" width="1200" height="800"
-                                    src="https://img.freepik.com/free-photo/businesswoman-working-laptop_53876-163211.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+                                    src="https://img.freepik.com/free-photo/people-office-analyzing-checking-finance-graphs_23-2150377147.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
                                     class="attachment-full size-full wp-image-335" alt="" />
                             </div>
                         </div>
@@ -765,21 +773,10 @@
                             data-id="75fc2c8" data-element_type="widget"
                             data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="text-editor.default">
-<div class="elementor-widget-container">
-  <p style="color: black;">
-    At Atelier Creation, our  SEO services are focused on turning data into growth. 
-    We analyze user behavior, search trends, and performance metrics to craft SEO strategies 
-    that improve visibility, strengthen rankings, and attract the right audience to your brand.
-  </p>
-
-  <p style="color: black;">
-    By combining in-depth analytics with on-page, technical, and content-driven SEO, we ensure 
-    every optimization is measurable and results-oriented. Our approach helps increase organic 
-    traffic, enhance user engagement, and deliver long-term ROI—empowering your business to 
-    compete and scale confidently in the digital landscape.
-  </p>
-</div>
-
+                            <div class="elementor-widget-container">
+                                <p style="color: black;">Atelier Creation builds smart business software solutions that streamline operations, improve efficiency, and support scalable growth. Our systems are designed to simplify workflows and enhance decision-making.</p>
+                                <p style="color: black;">We create software that aligns with your business processes and adapts as your business grows.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-746dfc3 e-con-full e-flex e-con e-child"
@@ -789,8 +786,10 @@
                             data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default" style="color: black;"><span></span> SEO</span> 
-                                    focused</h2>
+                                <h2 class="elementor-heading-title elementor-size-default" style="color: black;">Key
+                                    <span>feature</span> of
+                                    Business Software
+                                </h2>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-0dbb9cd elementor-invisible elementor-widget elementor-widget-text-editor"
@@ -798,8 +797,8 @@
                             data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="text-editor.default">
                             <div class="elementor-widget-container">
-                                <p style="color: black;">At Atelier Creation, our  SEO strategy is built around understanding user intent and search behavior. We combine performance analytics with advanced SEO techniques to ensure your brand reaches the right audience at the right time—organically and sustainably.</p>
-                                <p style="color: black;">By leveraging data insights, keyword intelligence, and audience segmentation, we optimize every touchpoint of your digital presence. This allows us to deliver relevant content, improve search visibility, and drive meaningful engagement that converts into measurable business growth.
+                                <p style="color: black;">Our business software solutions are practical, secure, and performance-driven. Each solution is designed to improve productivity while ensuring reliability and flexibility.</p>
+                                <p style="color: black;">We focus on building software that delivers real business value.
                                 </p>
                             </div>
                         </div>
@@ -815,32 +814,33 @@
                                     <li class="elementor-icon-list-item">
                                         <span class="elementor-icon-list-icon">
                                             <i aria-hidden="true" class="far fa-dot-circle"></i> </span>
-                                        <span class="elementor-icon-list-text" style="color: black;">Data-Driven Content Optimization for Search Visibility</span>
+                                        <span class="elementor-icon-list-text" style="color: black;">Custom Business Software Solutions</span>
                                     </li>
                                     <li class="elementor-icon-list-item">
                                         <span class="elementor-icon-list-icon">
                                             <i aria-hidden="true" class="far fa-dot-circle"></i> </span>
-                                        <span class="elementor-icon-list-text" style="color: black;">SEO-Focused Content Strategy That Builds Authority</span>
+                                        <span class="elementor-icon-list-text" style="color: black;">
+                                            Maintenance & Support</span>
                                     </li>
                                     <li class="elementor-icon-list-item">
                                         <span class="elementor-icon-list-icon">
                                             <i aria-hidden="true" class="far fa-dot-circle"></i> </span>
-                                        <span class="elementor-icon-list-text" style="color: black;">Technical SEO & Website Performance Optimization</span>
+                                        <span class="elementor-icon-list-text" style="color: black;">Workflow Automation & Optimization</span>
                                     </li>
                                     <li class="elementor-icon-list-item">
                                         <span class="elementor-icon-list-icon">
                                             <i aria-hidden="true" class="far fa-dot-circle"></i> </span>
-                                        <span class="elementor-icon-list-text" style="color: black;">Keyword Research & Search Intent Analysis</span>
+                                        <span class="elementor-icon-list-text" style="color: black;">CRM & ERP Development</span>
                                     </li>
                                     <li class="elementor-icon-list-item">
                                         <span class="elementor-icon-list-icon">
                                             <i aria-hidden="true" class="far fa-dot-circle"></i> </span>
-                                        <span class="elementor-icon-list-text" style="color: black;">Conversion Tracking & Performance Analytics</span>
+                                        <span class="elementor-icon-list-text" style="color: black;">Secure Data Management</span>
                                     </li>
                                     <li class="elementor-icon-list-item">
                                         <span class="elementor-icon-list-icon">
                                             <i aria-hidden="true" class="far fa-dot-circle"></i> </span>
-                                        <span class="elementor-icon-list-text" style="color: black;">Transparent Reporting & Continuous Optimization</span>
+                                        <span class="elementor-icon-list-text" style="color: black;">System Integration & Scalability</span>
                                     </li>
                                 </ul>
                             </div>
@@ -851,7 +851,7 @@
                             data-widget_type="image.default">
                             <div class="elementor-widget-container">
                                 <img decoding="async" width="343" height="303"
-                                    src="https://img.freepik.com/free-psd/seo-optimization-website-ranking-growth_84443-57196.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+                                    src="https://img.freepik.com/free-photo/futuristic-technology-concept_23-2151908061.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
                                     class="attachment-full size-full wp-image-570" alt="" />
                             </div>
                         </div>
@@ -863,8 +863,10 @@
                             data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default" style="color: black;"><span> SEO</span> workflow
-                                    </h2>
+                                <h2 class="elementor-heading-title elementor-size-default" style="color: black;">Our
+                                    <span>process</span> of
+                                    Business Software
+                                </h2>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-3dc7582 elementor-invisible elementor-widget elementor-widget-text-editor"
@@ -872,7 +874,7 @@
                             data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="text-editor.default">
                             <div class="elementor-widget-container">
-                                <p style="color: black;">Our Analytics & SEO process at Atelier Creation begins with deep research and discovery—analyzing your market, competitors, and audience behavior. We then craft a tailored SEO strategy, implement on-page and technical optimizations, and continuously monitor performance. Through ongoing analysis, testing, and refinement, we ensure long-term visibility, consistent traffic growth, and improved ROI.</p>
+                                <p style="color: black;">Our business software development process is structured and efficient.</p>
                             </div>
                         </div>
                     </div>
@@ -937,15 +939,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="elementor-element elementor-element-cc631a2 elementor-widget elementor-widget-image-box" 
+                            <div class="elementor-element elementor-element-cc631a2 elementor-widget elementor-widget-image-box"
                                 data-id="cc631a2" data-element_type="widget"
                                 data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                                 data-widget_type="image-box.default">
                                 <div class="elementor-widget-container">
                                     <div class="elementor-image-box-wrapper">
                                         <div class="elementor-image-box-content">
-                                            <h3 class="elementor-image-box-title">Discovery Phase</h3>
-                                            <p class="elementor-image-box-description">We analyze your brand objectives, target audience, competitors, and current website performance.
+                                            <h3 class="elementor-image-box-title">Business Analysis</h3>
+                                            <p class="elementor-image-box-description">We understand processes, challenges, and software requirements.
                                             </p>
                                         </div>
                                     </div>
@@ -960,7 +962,7 @@
                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
                                     <img loading="lazy" decoding="async" width="393" height="351"
-                                        src="https://img.freepik.com/premium-photo/marketer-showing-seo-conceptoptimization-analysis-tools-search-engine-rankings-social-media-sites-based-results-analysis-datawebsite-search-optimization-interesting-web-rankings-from-visitors_1364543-3897.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+                                        src="https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169847.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
                                         class="attachment-full size-full wp-image-1103" alt="" />
                                 </div>
                             </div>
@@ -973,7 +975,7 @@
                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
                                     <img loading="lazy" decoding="async" width="392" height="351"
-                                        src="https://img.freepik.com/free-photo/business-brainstorming-graph-chart-report-data-concept_53876-41686.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+                                        src="https://img.freepik.com/premium-photo/businessman-typing-laptop-keyboard-with-data_236854-48639.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
                                         class="attachment-full size-full wp-image-1297" alt="" />
                                 </div>
                             </div>
@@ -1040,8 +1042,8 @@
                                 <div class="elementor-widget-container">
                                     <div class="elementor-image-box-wrapper">
                                         <div class="elementor-image-box-content">
-                                            <h3 class="elementor-image-box-title">Implementation</h3>
-                                            <p class="elementor-image-box-description">Our team executes the SEO strategy through on-page optimization, content enhancements, technical improvements.
+                                            <h3 class="elementor-image-box-title">Design & Development</h3>
+                                            <p class="elementor-image-box-description">We design workflows and develop tailored software solutions.
                                             </p>
                                         </div>
                                     </div>
@@ -1110,8 +1112,8 @@
                                 <div class="elementor-widget-container">
                                     <div class="elementor-image-box-wrapper">
                                         <div class="elementor-image-box-content">
-                                            <h3 class="elementor-image-box-title">Collaboration</h3>
-                                            <p class="elementor-image-box-description">We work closely with your team, sharing insights, reports, and recommendations.
+                                            <h3 class="elementor-image-box-title">Deployment & Support</h3>
+                                            <p class="elementor-image-box-description">We deploy, test, and provide continuous support.
                                             </p>
                                         </div>
                                     </div>
@@ -1126,7 +1128,7 @@
                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
                                     <img loading="lazy" decoding="async" width="393" height="353"
-                                        src="https://img.freepik.com/free-photo/research-analysis-ideas-strategy-information-concept_53876-123886.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
+                                        src="https://img.freepik.com/free-photo/people-analyzing-checking-finance-graphs-office_23-2150377182.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
                                         class="attachment-full size-full wp-image-1296" alt="" />
                                 </div>
                             </div>
@@ -1139,8 +1141,10 @@
                             data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
                             data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default" style="color: black;">Lets address your
-                                    <span>questions</span> today!</h2>
+                                <h2 class="elementor-heading-title elementor-size-default" style="color: black;">Lets
+                                    address your
+                                    <span>questions</span> today!
+                                </h2>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-2e92f3e elementor-invisible elementor-widget elementor-widget-elementskit-accordion"
@@ -1160,7 +1164,7 @@
                                                     data-target="#Collapse-777547169486516595d8" aria-expanded="false"
                                                     aria-controls="Collapse-777547169486516595d8">
 
-                                                    <span class="ekit-accordion-title" style="color: black;">What services does your agency offer?</span>
+                                                    <span class="ekit-accordion-title" style="color: black;">Do you build custom business software?</span>
 
 
                                                     <div class="ekit_accordion_icon_group">
@@ -1184,7 +1188,7 @@
                                                 data-parent="#accordion-69486516595d8">
 
                                                 <div class="elementskit-card-body ekit-accordion--content">
-                                                    <p style="color: black;">Atelier Creation provides Analytics & SEO services including keyword research, technical SEO, on-page optimization, performance tracking, conversion analysis, and data-driven growth strategies.</p>
+                                                    <p style="color: black;">Yes, all solutions are tailored to business needs.</p>
                                                 </div>
 
                                             </div>
@@ -1200,7 +1204,7 @@
                                                     data-target="#Collapse-e260b7e69486516595d8" aria-expanded="true"
                                                     aria-controls="Collapse-e260b7e69486516595d8">
 
-                                                    <span class="ekit-accordion-title" style="color: black;">How long does a typical project take?</span>
+                                                    <span class="ekit-accordion-title" style="color: black;">Can your software scale with growth?</span>
 
 
                                                     <div class="ekit_accordion_icon_group">
@@ -1224,7 +1228,7 @@
                                                 data-parent="#accordion-69486516595d8">
 
                                                 <div class="elementskit-card-body ekit-accordion--content">
-                                                    <p style="color: black;">SEO is a long-term investment. Initial improvements can be seen within weeks, while sustained growth typically develops over 3–6 months, depending on competition and scope.</p>
+                                                    <p style="color: black;">Absolutely. Our systems are designed to scale.</p>
                                                 </div>
 
                                             </div>
@@ -1240,10 +1244,10 @@
                                                     data-target="#Collapse-2b87c7369486516595d8" aria-expanded="false"
                                                     aria-controls="Collapse-2b87c7369486516595d8">
 
-                                                    <span class="ekit-accordion-title" style="color: black;">Do you work with small businesses?</span>
+                                                    <span class="ekit-accordion-title" style="color: black;">Do you integrate with existing tools?</span>
 
 
-                                                    <div class="ekit_accordion_icon_group" >
+                                                    <div class="ekit_accordion_icon_group">
                                                         <div class="ekit_accordion_normal_icon">
                                                             <!-- Normal Icon -->
                                                             <i class="fas fa-plus-circle"></i>
@@ -1264,7 +1268,7 @@
                                                 data-parent="#accordion-69486516595d8">
 
                                                 <div class="elementskit-card-body ekit-accordion--content">
-                                                    <p style="color: black;">Yes. We tailor our Analytics & SEO strategies for startups, small businesses, and growing brands—focusing on cost-effective optimization and scalable growth.</p>
+                                                    <p style="color: black;">Yes, we integrate with current business systems.</p>
                                                 </div>
 
                                             </div>
@@ -1280,7 +1284,7 @@
                                                     data-target="#Collapse-0fc637869486516595d8" aria-expanded="false"
                                                     aria-controls="Collapse-0fc637869486516595d8">
 
-                                                    <span class="ekit-accordion-title" style="color: black;">Can you help with existing websites?</span>
+                                                    <span class="ekit-accordion-title" style="color: black;">Do you provide long-term support?</span>
 
 
                                                     <div class="ekit_accordion_icon_group">
@@ -1304,7 +1308,7 @@
                                                 data-parent="#accordion-69486516595d8">
 
                                                 <div class="elementskit-card-body ekit-accordion--content">
-                                                    <p style="color: black;">Absolutely. We audit and optimize existing websites to improve performance, fix technical issues, enhance content, and increase search visibility without rebuilding from scratch.</p>
+                                                    <p style="color: black;">Yes, we offer ongoing maintenance and upgrades.</p>
                                                 </div>
 
                                             </div>
@@ -1350,7 +1354,7 @@
                                                     <div class="elementor-widget-container">
                                                         <ul class="elementor-icon-list-items">
                                                             <li class="elementor-icon-list-item">
-                                                                <a href="/ServicePage/UiUx.html">
+                                                                <a href="/ServicePage/Seo.html">
 
                                                                     <span class="elementor-icon-list-icon">
                                                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -1361,7 +1365,7 @@
                                                                             </path>
                                                                         </svg> </span>
                                                                     <span class="elementor-icon-list-text">
-                                                                        UI UX</span>
+                                                                        SEO</span>
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
@@ -1393,7 +1397,7 @@
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
-                                                                <a href="/ServicePage/BusinessSoftware.html">
+                                                                <a href="/ServicePage/UiUx.html">
 
                                                                     <span class="elementor-icon-list-icon">
                                                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -1403,7 +1407,7 @@
                                                                                 d="M23.6144 13.8266L11.4211 26.0199L9.41797 24.0167L21.6098 11.8234H10.8644V8.99011H26.4477V24.5734H23.6144V13.8266Z">
                                                                             </path>
                                                                         </svg> </span>
-                                                                    <span class="elementor-icon-list-text">Business Software</span>
+                                                                    <span class="elementor-icon-list-text">UI UX</span>
                                                                 </a>
                                                             </li>
                                                             <li class="elementor-icon-list-item">
@@ -1659,58 +1663,58 @@
         //# sourceURL=https://demo.awaikenthemes.com/artistics/wp-includes/js/wp-emoji-loader.min.js
     </script>
     <script src="https://demo.awaikenthemes.com/assets/js/theme-panel.js"></script>
-<script>
-fetch("../Navbar.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("new-navbar-container").innerHTML = html;
+    <script>
+        fetch("../Navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("new-navbar-container").innerHTML = html;
 
-    // ✅ INIT LOGO SWITCH AFTER NAVBAR LOADS
-    initNavbarLogoSwitch();
-  });
-</script>
-<script>
-fetch("../FooterSec/FooterSec.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("new-footer-container").innerHTML = html;
+                // ✅ INIT LOGO SWITCH AFTER NAVBAR LOADS
+                initNavbarLogoSwitch();
+            });
+    </script>
+    <script>
+        fetch("../FooterSec/FooterSec.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("new-footer-container").innerHTML = html;
 
-    // ✅ INIT LOGO SWITCH AFTER NAVBAR LOADS
-    initNavbarLogoSwitch();
-  });
-</script>
-<script>
-    const button = document.querySelector('.btn-rounded');
-const glow = document.querySelector('.btn-dot-box');
+                // ✅ INIT LOGO SWITCH AFTER NAVBAR LOADS
+                initNavbarLogoSwitch();
+            });
+    </script>
+    <script>
+        const button = document.querySelector('.btn-rounded');
+        const glow = document.querySelector('.btn-dot-box');
 
-button.addEventListener('mousemove', (e) => {
-  // Get the bounding rectangle of the button
-  const rect = button.getBoundingClientRect();
-  
-  // Calculate mouse position relative to the button
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+        button.addEventListener('mousemove', (e) => {
+            // Get the bounding rectangle of the button
+            const rect = button.getBoundingClientRect();
 
-  // Move the glow element
-  glow.style.left = `${x}px`;
-  glow.style.top = `${y}px`;
-});
-</script>
+            // Calculate mouse position relative to the button
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-<script>
-  const navbar1 = document.getElementById("navbar1");
-  const navbar2 = document.getElementById("new-navbar-container");
+            // Move the glow element
+            glow.style.left = `${x}px`;
+            glow.style.top = `${y}px`;
+        });
+    </script>
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 120) {
-      navbar1.style.opacity = "0";
-      navbar2.classList.add("active");
-    } else {
-      navbar1.style.opacity = "1";
-      navbar2.classList.remove("active");
-    }
-  });
-</script>
+    <script>
+        const navbar1 = document.getElementById("navbar1");
+        const navbar2 = document.getElementById("new-navbar-container");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 120) {
+                navbar1.style.opacity = "0";
+                navbar2.classList.add("active");
+            } else {
+                navbar1.style.opacity = "1";
+                navbar2.classList.remove("active");
+            }
+        });
+    </script>
 </body>
 
 </html>
