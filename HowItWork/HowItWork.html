@@ -22,11 +22,11 @@
         <div class="HowItWork-inner">
 
             <div class="HowItWork-image-side" >
-                <div class="HowItWork-main-image-wrapper">
+                <div class="HowItWork-main-image-wrapper" data-aos="fade-right" data-aos-delay="200">
                     <img src="https://demo.awaikenthemes.com/creza/wp-content/uploads/2025/10/how-it-works-image-gold.jpg"
                         alt="Team Working" class="HowItWork-main-img">
 
-                    <div class="HowItWork-rating-badge">
+                    <div class="HowItWork-rating-badge" data-aos="zoom-in" data-aos-delay="200">
                         <div class="HowItWork-stars">★★★★★</div>
                         <div class="HowItWork-rating-number">4.9/5</div>
                         <div class="HowItWork-rating-text">(500+ Our Client Review)</div>
@@ -35,15 +35,15 @@
             </div>
 
             <div class="HowItWork-content-side">
-                <span class="HowItWork-sub-label" >✳ HOW IT WORK</span>
-                <h2 class="HowItWork-main-title" >OUR PROCESS EXPLAIN IN SIMPLE STEPS</h2>
-                <p class="HowItWork-description" >
+                <span class="HowItWork-sub-label"data-aos="fade-down" data-aos-delay="200" >✳ HOW IT WORK</span>
+                <h2 class="HowItWork-main-title"data-aos="fade-down" data-aos-delay="200" >OUR PROCESS EXPLAIN IN SIMPLE STEPS</h2>
+                <p class="HowItWork-description"data-aos="fade-down" data-aos-delay="200" >
                     We believe great results come from a clear process. From understanding your vision to delivering
                     impactful solutions, our step-by-step approach ensures creativity, strategy.
                 </p>
 
                 <div class="HowItWork-cards-grid">
-                    <div class="HowItWork-card">
+                    <div class="HowItWork-card" data-aos="fade-right" data-aos-delay="200">
                         <div class="HowItWork-card-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
                                 fill="currentColor">
@@ -68,7 +68,7 @@
                         <div class="HowItWork-step-tag">✦ Step 01</div>
                     </div>
 
-                    <div class="HowItWork-card" >
+                    <div class="HowItWork-card" data-aos="fade-down" data-aos-delay="200">
                         <div class="HowItWork-card-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
                                 fill="currentColor">
@@ -96,7 +96,7 @@
                         <div class="HowItWork-step-tag">✦ Step 02</div>
                     </div>
 
-                    <div class="HowItWork-card" >
+                    <div class="HowItWork-card" data-aos="fade-left" data-aos-delay="200">
                         <div class="HowItWork-card-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
                                 fill="currentColor">
@@ -119,22 +119,24 @@
                     </div>
                 </div>
 
-                <p class="HowItWork-footer-text" >
+                <p class="HowItWork-footer-text" data-aos="fade-down" data-aos-delay="200">
                     Let's make something great work together. <a href="/ContactPage/ContactPage.html"
                         class="HowItWork-link">Get Free Quote</a>
                 </p>
             </div>
         </div>
     </section>
-<script>
-  AOS.init({
-    duration: 1000,
-    easing: "ease-in-out",
-    once: true,
-    offset: 120,
-    disable: function () {
-      return window.innerWidth < 768;
-    }
+        <script>
+  window.addEventListener("load", () => {
+    AOS.init({
+      duration: 1000,
+      easing: "linear",
+      once: true,
+      offset: 50,
+      disable: () => window.innerWidth < 768,
+    });
+
+    AOS.refreshHard();
   });
 </script>
 
